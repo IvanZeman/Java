@@ -2,29 +2,43 @@ import java.awt.Color;
 import java.awt.Font;
 
 import javax.swing.*;
+import javax.swing.event.ChangeEvent;
 import javax.swing.*;
 
 public class ProgressBarDemo {
 	
 	JFrame frame = new JFrame();
+	JPanel panel = new JPanel();
+	JLabel label = new JLabel();
 	JProgressBar bar = new JProgressBar(0,100);
+	
+	JSlider slider = new JSlider();			//50 = starting point
+	
+
 	
 	ProgressBarDemo(){
 		
-		bar.setValue(0);
-		bar.setBounds(0, 0, 420, 50);
-		bar.setStringPainted(true);
-		bar.setFont(new Font("MV Boli",Font.BOLD,25));
-		bar.setForeground(Color.red);
-		bar.setBackground(Color.black);
-		
+;
+				
+		label.setText("°C = ");
+		label.setText("°C = "+ slider.getValue());
+			
+		panel.add(label);
+		frame.add(panel);
 		frame.add(bar);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frame.setSize(420,420);
-		frame.setLayout(null);
+		frame.setSize(400,400);
+
 		frame.setVisible(true);
 		
+		
 		fill();
+	}
+	
+	public void stateChanged(ChangeEvent e) {
+
+		label.setText("°C = "+ bar.getValue());
+		
 	}
 
 	public void fill() {
