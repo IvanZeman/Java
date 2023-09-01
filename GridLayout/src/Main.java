@@ -1,4 +1,4 @@
-import java.awt.FlowLayout;
+import java.awt.GridLayout;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 
@@ -8,14 +8,14 @@ public class Main{
 
 		// Layout Manager = Defines the natural layout for components within a container
 		
-		// FlowLayout = 	places components in a row, sized at their preferred size. 
-		//					If the horizontal space in the container is too small,
-		//					the FlowLayout class uses the next available row.
-		
+		// GridLayout = 	places components in a grid of cells. 
+		//					Each component takes all the available space within its cell, 
+		//					and each cell is the same size. 
+
 		JFrame frame = new JFrame();
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setSize(500, 500);
-		frame.setLayout(new FlowLayout(FlowLayout.CENTER,0,0));
+		frame.setLayout(new GridLayout(3,3,0,0));
 		
 		frame.add(new JButton("1"));
 		frame.add(new JButton("2"));
@@ -28,5 +28,6 @@ public class Main{
 		frame.add(new JButton("9"));
 		
 		frame.setVisible(true);
+
 	}
 }
