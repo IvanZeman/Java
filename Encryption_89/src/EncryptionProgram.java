@@ -121,4 +121,4 @@ public class EncryptionProgram {
 		System.out.println("Thank you, have a nice day bro!");
 		System.exit(0);
 	}
-}n
+}
