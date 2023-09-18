@@ -15,7 +15,7 @@ public class WelcomePage {
 		frame.add(welcomeLabel);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setSize(250, 250);
-		frame.setLocationRelativeTo(null);
+		//frame.setLocationRelativeTo(c);
 		frame.setLayout(null);
 		frame.setVisible(true);
 	}
